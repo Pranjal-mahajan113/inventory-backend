@@ -24,7 +24,7 @@ const productSchema = new mongoose.Schema(
     },
     unit: {
       type: String,
-      enum: ["kg", "pcs", "litre"],
+      enum: ["kg", "packets", "litre"],
     },
     expiryDate: {
       type: Date,
@@ -34,7 +34,7 @@ const productSchema = new mongoose.Schema(
       default: 0,
     },
     image: {
-      type: String, // 🔥 image URL store hoga
+      type: String, //  image URL store hoga
     },
     userId: {
       type: mongoose.Schema.Types.ObjectId,

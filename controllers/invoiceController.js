@@ -14,7 +14,7 @@ const createInvoice = async (req, res) => {
       });
     }
 
-    // 🔐 CHECK: product belongs to logged-in user
+    //  CHECK: product belongs to logged-in user
     if (product.userId.toString() !== req.user._id.toString()) {
       return res.status(403).json({
         success: false,
@@ -33,18 +33,18 @@ const createInvoice = async (req, res) => {
     await product.save();
 
     // Generate invoiceId (simple example)
-    const lastInvoice = await Invoice.findOne({ userId: req.user._id }).sort({
-      createdAt: -1,
-    });
+    // const lastInvoice = await Invoice.findOne({ userId: req.user._id }).sort({
+    //   createdAt: -1,
+    // });
 
-    let nextId = 1001;
-    if (lastInvoice) {
-      const lastNumber = parseInt(lastInvoice.invoiceId.split("-")[1]);
-      nextId = lastNumber + 1;
-    }
+    // let nextId = 1001;
+    // if (lastInvoice) {
+    //   const lastNumber = parseInt(lastInvoice.invoiceId.split("-")[1]);
+    //   nextId = lastNumber + 1;
+    // }
 
-    const invoiceId = `INV-${nextId}`;
-
+    // const invoiceId = `INV-${nextId}`;
+    const invoiceId = `INV-${Date.now()}-${Math.floor(Math.random() * 1000)}`;
     const amount = product.price * quantity;
     const dueDate = new Date();
     dueDate.setDate(dueDate.getDate() + 7);
