@@ -23,6 +23,6 @@
 
   ## CSV Format Example leads.csv
 
-name,email,source,leadDate,location,language
-John Doe,john@example.com,Facebook,2024-03-10,USA,English
-Jane Smith,jane@example.com,Website,2024-03-12,UK,English
+-name,email,source,leadDate,location,language
+-John Doe,john@example.com,Facebook,2024-03-10,USA,English
+-Jane Smith,jane@example.com,Website,2024-03-12,UK,English
