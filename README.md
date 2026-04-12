@@ -27,3 +27,18 @@ name,email,source,leadDate,location,language
 
 John Doe,john@example.com,Facebook,2024-03-10,USA,English  
 Jane Smith,jane@example.com,Website,2024-03-12,UK,English
+
+
+## 🚀 Deployment Links
+
+### Admin Panel
+- Repo: https://github.com/Pranjal-mahajan113/admin-frontend-management
+- Live: https://admin-frontend.vercel.app
+
+### Employee Panel
+- Repo: https://github.com/Pranjal-mahajan113/employee-frontend
+- Live: https://employee-frontend.vercel.app
+
+### Backend API
+- Repo: https://github.com/Pranjal-mahajan113/backend-crm
+- Live: https://backend-crm.onrender.com
